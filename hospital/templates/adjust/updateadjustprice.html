@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <input type="text" name="adjustpriceID" id="adjustpriceID" placeholder="请输入调价单号" value="{{ update.adjustpriceID }}">
+    <input type="text" name="adjustdrugname" id="adjustdrugname" placeholder="请输入调价药品名称" value="{{ update.adjustdrugname }}">
+    <input type="text" name="adjustpricebefore" id="adjustpricebefore" placeholder="请输入调价前价格" value="{{ update.adjustpricebefore }}">
+    <input type="text" name="adjustpriceafter" id="adjustpriceafter" placeholder="请输入调价后价格" value="{{ update.adjustpriceafter }}">
+    <input type="text" name="drugID" id="drugID" placeholder="请输入药品ID" value="{{ update.drugID }}">
+    <input type="submit" id="adjust" value="提交">
+</form>
+</body>
+</html>

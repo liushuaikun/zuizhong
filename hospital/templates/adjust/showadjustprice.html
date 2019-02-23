@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<table border="1">
+    <tr>
+        <th>调价单单号</th>
+        <th>调价药品名称</th>
+        <th>调价前价格</th>
+        <th>调价后价格</th>
+        <th>药品ID</th>
+    </tr>
+    {% for item in show %}
+        <tr>
+            <td>{{ item.adjustpriceID }}</td>
+            <td>{{ item.adjustdrugname }}</td>
+            <td>{{ item.adjustpricebefore }}</td>
+            <td>{{ item.adjustpriceafter }}</td>
+            <td>{{ item.drugID }}</td>
+            <td><a href="/adjust/update?adjustpriceID={{ item.adjustpriceID }}">{{ item.adjustdrugname }}</a></td>
+            <td><a href="/adjust/delete?adjustpriceID={{ item.adjustpriceID }}">删除</a></td>
+
+        </tr>
+    {% endfor %}
+</table>
+<a href="/adjust/addprice">添加调价单</a>
+<a href="head.html">退出</a>
+</body>
+</html>
