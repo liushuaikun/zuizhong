@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    id:
+    <input type="text" name="suppierId" placeholder="请输入供应商ID" ><br>
+    名称：
+    <input type="text" name="suppierName" placeholder="请输入供应商名称" ><br>
+    电话：
+    <input type="text" name="suppierPhone" placeholder="请输入供应商电话" ><br>
+    地址：
+    <input type="text" name="suppierAddress" placeholder="请输入供应商地址" ><br>
+    联系人：
+    <input type="text" name="suppierMan" placeholder="请输入供应商联系人" ><br>
+    <input type="submit" name="点击事件" value="提交">
+
+
+
+</form>
+</body>
+</html>

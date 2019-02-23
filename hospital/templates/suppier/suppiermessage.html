@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+
+
+<body>
+
+</body>
+    <table border="1">
+
+
+    <td>供应商id</td>
+    <td>名字</td>
+    <td>电话</td>
+    <td>地址</td>
+    <td>联系人</td>
+
+
+    {% for test in test %}
+        <tr>
+        <td><a href="/supplier/updatesuppier?suppierId={{ test.suppierId }}">{{ test.suppierId }}</a></td>
+        <td>{{ test.name }}</td>
+        <td>{{ test.phoneNo }}</td>
+        <td>{{ test.address }}</td>
+        <td>{{ test.linkMan }}</td>
+        <td><a href="/supplier/deletesuppier?suppierId={{ test.suppierId }}">删除</a></td>
+
+        </tr>
+    {% endfor %}
+
+    </table>
+    <a href="/supplier/addsuppier">添加供应商</a>
+    <a href="/supplier/quit">退出</a>
+</html>
