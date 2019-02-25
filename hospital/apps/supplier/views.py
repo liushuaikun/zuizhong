@@ -13,13 +13,13 @@ class addsuppier(View):
     def get(self,request):
         return render(request,'../templates/suppier/suppieradd.html')
     def post(self,request):
-        supperid = request.POST.get('suppierId')
+        suppierid = request.POST.get('suppierId')
         suppiername = request.POST.get('suppierName')
         suppierphone = request.POST.get('suppierPhone')
         suppieraddress = request.POST.get('suppierAddress')
         suppierman = request.POST.get('suppierMan')
         d=Suppier()
-        d.suppierId = supperid
+        d.suppierId = suppierid
         d.name = suppiername
         d.phoneNo = suppierphone
         d.address = suppieraddress

@@ -20,5 +20,10 @@ from . import views
 app_name="contract"
 
 urlpatterns = [
+    path('show/',views.contractshow.as_view(),name="contractshow"),
+    path('contractadd/', views.contractadd.as_view(), name="contractadd"),
+    path('contractupdate/', views.contractupdate.as_view(), name="contractupdate"),
+    path('contractdelete/', views.contractdelete.as_view(), name="contractdelete"),
+    path('quit/', views.quit.as_view(), name="quit"),
 
 ]

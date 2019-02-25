@@ -20,7 +20,7 @@ from . import views
 app_name="supplier"
 
 urlpatterns = [
-    path('suppiershow/' , views.suppiershow.as_view() , name="suppiershow"),
+    path('show/' , views.suppiershow.as_view() , name="suppiershow"),
     path('addsuppier/' , views.addsuppier.as_view() , name="addsuppier"),
     path('updatesuppier/' , views.updatesuppier.as_view() , name="updatesuppier"),
     path('deletesuppier/' , views.deletesuppier.as_view() , name="deletesuppier"),

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+
+<table border="1">
+
+
+    <td>供应商id</td>
+    <td>药品id</td>
+    <td>药品单价</td>
+    <td>药品数量</td>
+    <td>用户id</td>
+    <td>交易时间</td>
+
+    {% for test in test %}
+        <tr>
+            <td><a href="/contract/contractupdate?suppierId={{ test.suppierId }}">{{ test.suppierId }}</a></td>
+            <td>{{ test.drugId }}</td>
+            <td>{{ test.price }}</td>
+            <td>{{ test.amount }}</td>
+            <td>{{ test.userId }}</td>
+            <td>{{ test.time }}</td>
+            <td><a href="/contract/contractdelete?suppierId={{ test.suppierId }}">删除</a></td>
+
+        </tr>
+    {% endfor %}
+
+    </table>
+    <a href="/contract/contractadd">添加供应商</a>
+    <a href="/contract/quit">退出</a>
+
+
+
+
+
+</html>

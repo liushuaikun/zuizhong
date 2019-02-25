@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    id:
+    <input type="text" name="suppierId" placeholder="请输入供应商ID" value='{{ data.suppierId }}'><br>
+    药品id：
+    <input type="text" name="drupId" placeholder="请输入药品id" value="{{ data.drugId }}"><br>
+    药品单价：
+    <input type="text" name="price" placeholder="请输入药品单价" value="{{ data.price }}"><br>
+    药品数量：
+    <input type="text" name="amount" placeholder="请输入药品数量" value="{{ data.amount }}"><br>
+    用户id：
+    <input type="text" name="userId" placeholder="请输入用户id" value="{{ data.userId }}"><br>
+    交易时间：
+    <input type="text" name="time" placeholder="请输入交易时间" value="{{ data.time }}"><br>
+    <input type="submit"  value="提交">
+
+
+</form>
+</body>
+</html>
